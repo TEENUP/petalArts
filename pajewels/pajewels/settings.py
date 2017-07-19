@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'customer',
     'products',
     'transactions',
+    'home',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -122,3 +123,15 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR , 'static')
+
+# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+# DEFAULT_FROM_EMAIL = 'ddproductions.2017@gmail.com'
+EMAIL_HOST="smtp.gmail.com"
+EMAIL_HOST_USER = 'ddproductions.2017@gmail.com'
+EMAIL_HOST_PASSWORD = '9873779876'
+# EMAIL_USE_TLS = False
+# EMAIL_PORT = 1025
+EMAIL_PORT = '587'
+EMAIL_USE_TLS = True
+

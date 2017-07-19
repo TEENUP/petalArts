@@ -1,0 +1,342 @@
+{% extends 'home/base.html' %}
+{% block content %}
+
+{% load staticfiles %}
+
+<head>
+
+    <style>
+#myDIV1 {
+    width: 100%;
+    padding: 50px 0;
+    text-align: center;
+    background-color: lightblue;
+    margin-top:20px;
+}
+#myDIV2 {
+    width: 100%;
+    padding: 50px 0;
+    text-align: center;
+    background-color: yellow;
+    margin-top:20px;
+}
+#myDIV3 {
+    width: 100%;
+    padding: 50px 0;
+    text-align: center;
+    background-color: darkblue;
+    margin-top:20px;
+}
+#myDIV4 {
+    width: 100%;
+    padding: 50px 0;
+    text-align: center;
+    background-color: red;
+    margin-top:20px;
+}
+#myDIV5 {
+    width: 100%;
+    padding: 50px 0;
+    text-align: center;
+    background-color: green;
+    margin-top:20px;
+}
+</style>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Products</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href={% static 'css/bootstrap.min_plans.css' %} rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href={% static 'css/shop-item_plans.css' %} rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+    
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-md-3">
+                <p class="lead">Product Categories</p>
+                <div class="list-group">
+                    <button onclick="myFunction1()">Category 1</button> <!--<a href="#" class="list-group-item active">Category 1</a>-->
+                    <br>
+                    <button onclick="myFunction2()">Category 2</button> <!--<a href="#" class="list-group-item active">Category 2</a>-->
+                    <br>
+                    <button onclick="myFunction3()">Category 3</button> <!--<a href="#" class="list-group-item active">Category 3</a>-->
+                    <br>
+                    <button onclick="myFunction4()">Category 4</button> <!--<a href="#" class="list-group-item active">Category 4</a>-->
+                    <br>
+                    <button onclick="myFunction5()">Category 5</button> <!--<a href="#" class="list-group-item active">Category 5</a>-->
+                    <br>
+                    <input onclick="myFunction1()" type="image" src="{% static 'img/portfolio/fullsize/6.jpg' %}" alt="{alternate text}" />
+                </div>
+            </div>
+
+
+        <div class="col-md-9">
+            <div id="myDIV1" class="col-md-9">
+
+                <div class="thumbnail">
+                    <img class="img-responsive" src="http://placehold.it/800x300" alt="">
+                    <div class="caption-full">
+                        <h4 class="pull-right">Rs 5000</h4>
+                        <h4><a href="#">Category 1</a>
+                        </h4>
+                        <p>See more snippets like these online store reviews at <a target="_blank" href="http://bootsnipp.com">Bootsnipp - http://bootsnipp.com</a>.</p>
+                        <p>Want to make these reviews work? Check out
+                            <strong><a href="http://maxoffsky.com/code-blog/laravel-shop-tutorial-1-building-a-review-system/">this building a review system tutorial</a>
+                            </strong>over at maxoffsky.com!</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                    </div>
+                    
+                </div>
+
+                <div class="well">
+
+                    <div class="text-right">
+<<<<<<< HEAD
+                        <a class="btn btn-success" href={{buyAnotherProduct}}>BUY</a>
+=======
+                        <a class="btn btn-success" href="/sign_up?productId=1">BUY</a>
+>>>>>>> dad612665391d4786b87b7acb082c969b0f49b14
+                    </div>
+                    
+                </div>
+
+            </div>
+
+
+
+
+            <div id="myDIV2" class="col-md-9">
+
+                <div class="thumbnail">
+                    <img class="img-responsive" src="http://placehold.it/800x300" alt="">
+                    <div class="caption-full">
+                        <h4 class="pull-right">Rs 10000</h4>
+                        <h4><a href="#">Category 2</a>
+                        </h4>
+                        <p>See more snippets like these online store reviews at <a target="_blank" href="http://bootsnipp.com">Bootsnipp - http://bootsnipp.com</a>.</p>
+                        <p>Want to make these reviews work? Check out
+                            <strong><a href="http://maxoffsky.com/code-blog/laravel-shop-tutorial-1-building-a-review-system/">this building a review system tutorial</a>
+                            </strong>over at maxoffsky.com!</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                    </div>
+                </div>    
+                <div class="well">
+
+                    <div class="text-right">
+<<<<<<< HEAD
+                        <a class="btn btn-success" href={{buyAnotherProduct}}>BUY</a>
+=======
+                        <a class="btn btn-success" href="/sign_up?productId=2">BUY</a>
+>>>>>>> dad612665391d4786b87b7acb082c969b0f49b14
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div id="myDIV3" class="col-md-9">
+
+                <div class="thumbnail">
+                    <img class="img-responsive" src="http://placehold.it/800x300" alt="">
+                    <div class="caption-full">
+                        <h4 class="pull-right">Rs 30000</h4>
+                        <h4><a href="#">Category 3</a>
+                        </h4>
+                        <p>See more snippets like these online store reviews at <a target="_blank" href="http://bootsnipp.com">Bootsnipp - http://bootsnipp.com</a>.</p>
+                        <p>Want to make these reviews work? Check out
+                            <strong><a href="http://maxoffsky.com/code-blog/laravel-shop-tutorial-1-building-a-review-system/">this building a review system tutorial</a>
+                            </strong>over at maxoffsky.com!</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                    </div>
+                </div>
+                <div class="well">
+
+                    <div class="text-right">
+<<<<<<< HEAD
+                        <a class="btn btn-success" href={{buyAnotherProduct}}>BUY</a>
+=======
+                        <a class="btn btn-success" href="/sign_up?productId=3">BUY</a>
+>>>>>>> dad612665391d4786b87b7acb082c969b0f49b14
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div id="myDIV4" class="col-md-9">
+
+                <div class="thumbnail">
+                    <img class="img-responsive" src="http://placehold.it/800x300" alt="">
+                    <div class="caption-full">
+                        <h4 class="pull-right">Rs 50000</h4>
+                        <h4><a href="#">Category 4</a>
+                        </h4>
+                        <p>See more snippets like these online store reviews at <a target="_blank" href="http://bootsnipp.com">Bootsnipp - http://bootsnipp.com</a>.</p>
+                        <p>Want to make these reviews work? Check out
+                            <strong><a href="http://maxoffsky.com/code-blog/laravel-shop-tutorial-1-building-a-review-system/">this building a review system tutorial</a>
+                            </strong>over at maxoffsky.com!</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                    </div>
+                </div>
+               <div class="well">
+
+                    <div class="text-right">
+<<<<<<< HEAD
+                        <a class="btn btn-success" href={{buyAnotherProduct}}>BUY</a>
+=======
+                        <a class="btn btn-success" href="/sign_up?productId=4">BUY</a>
+>>>>>>> dad612665391d4786b87b7acb082c969b0f49b14
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div id="myDIV5" class="col-md-9">
+
+                <div class="thumbnail">
+                    <img class="img-responsive" src="http://placehold.it/800x300" alt="">
+                    <div class="caption-full">
+                        <h4 class="pull-right">Rs 90000</h4>
+                        <h4><a href="#">Category 5</a>
+                        </h4>
+                        <p>See more snippets like these online store reviews at <a target="_blank" href="http://bootsnipp.com">Bootsnipp - http://bootsnipp.com</a>.</p>
+                        <p>Want to make these reviews work? Check out
+                            <strong><a href="http://maxoffsky.com/code-blog/laravel-shop-tutorial-1-building-a-review-system/">this building a review system tutorial</a>
+                            </strong>over at maxoffsky.com!</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                    </div>
+                </div>
+                <div class="well">
+
+                    <div class="text-right">
+<<<<<<< HEAD
+                        <a class="btn btn-success" href={{buyAnotherProduct}}>BUY</a>
+=======
+                        <a class="btn btn-success" href="/sign_up?productId=5">BUY</a>
+>>>>>>> dad612665391d4786b87b7acb082c969b0f49b14
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+        </div>
+
+    </div>
+
+    <script>
+    var a = document.getElementById('myDIV1');
+    var b = document.getElementById('myDIV2');
+    var c = document.getElementById('myDIV3');
+    var d = document.getElementById('myDIV4');
+    var e = document.getElementById('myDIV5');
+    //a.style.display = 'none';
+    b.style.display = 'none';
+    c.style.display = 'none';
+    d.style.display = 'none';
+    e.style.display = 'none';
+function myFunction1() {
+    
+    if (a.style.display === 'none') {
+        a.style.display = 'block';
+        b.style.display = 'none';
+        c.style.display = 'none';
+        d.style.display = 'none';
+        e.style.display = 'none';
+    } else {
+        a.style.display = 'none';
+    }
+}
+
+function myFunction2() {
+    
+    if (b.style.display === 'none') {
+        b.style.display = 'block';
+        a.style.display = 'none';
+        c.style.display = 'none';
+        d.style.display = 'none';
+        e.style.display = 'none';
+    } else {
+        b.style.display = 'none';
+    }
+}
+
+function myFunction3() {
+    
+    if (c.style.display === 'none') {
+        c.style.display = 'block';
+        a.style.display = 'none';
+        b.style.display = 'none';
+        d.style.display = 'none';
+        e.style.display = 'none';
+    } else {
+        c.style.display = 'none';
+    }
+}
+
+function myFunction4() {
+    
+    if (d.style.display === 'none') {
+        d.style.display = 'block';
+        b.style.display = 'none';
+        c.style.display = 'none';
+        a.style.display = 'none';
+        e.style.display = 'none';
+    } else {
+        d.style.display = 'none';
+    }
+}
+
+function myFunction5() {
+    
+    if (e.style.display === 'none') {
+        e.style.display = 'block';
+        b.style.display = 'none';
+        c.style.display = 'none';
+        a.style.display = 'none';
+        d.style.display = 'none';
+    } else {
+        e.style.display = 'none';
+    }
+}
+</script>
+
+
+    <!-- /.container -->
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src={% static 'js/jquery_plans.js' %}></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src={% static 'js/bootstrap.min_plans.js' %}></script>
+
+</body>
+
+{% endblock %}

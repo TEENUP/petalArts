@@ -20,6 +20,7 @@ SECRET = "qwerty"
 
 
 def make_salt():
+<<<<<<< Updated upstream
     return "".join(random.choice(string.letters) for x in range(0, 5))
 
 
@@ -28,6 +29,16 @@ def make_pw_hash(name, pw, salt=None):
         salt = make_salt()
     h = hashlib.sha256(name + pw + salt).hexdigest()
     return "%s,%s" % (h, salt)
+
+=======
+	return "".join(random.choice(string.letters) for x in range (0,5))
+
+def make_pw_hash(name,pw,salt=None):
+	if not salt:
+		salt=make_salt()
+	h=hashlib.sha256(name+pw+salt).hexdigest()
+	return "%s,%s"%(h,salt)
+>>>>>>> Stashed changes
 
 def hash_str(s):
     return hmac.new(str(SECRET), str(s)).hexdigest()
@@ -39,10 +50,22 @@ def make_secure_val(s):
 
 
 def check_secure_val(h):
+<<<<<<< Updated upstream
     check_value = h.split('|')
     if hash_str(check_value[0]) == check_value[1]:
         return check_value[0]
     return None
+
+=======
+	check_value=h.split('|')
+	if hash_str(check_value[0])==check_value[1]:
+		return check_value[0]
+	return None
+
+def valid_pw(name,pw,h):
+	salt=h.split(',')[1]
+	return h==make_pw_hash(name,pw,salt)
+>>>>>>> Stashed changes
 
 def valid_pw(name, pw, h):
     salt = h.split(',')[1]
@@ -65,7 +88,10 @@ def calculate(rootSponserId, sponserId):
 
 # tree generation
 
+
 def treeGenerate(sponserId):
+<<<<<<< Updated upstream
+
     # print sponserId
 
     objs = UserRelation.objects.filter(parentId=sponserId)
@@ -79,6 +105,23 @@ def treeGenerate(sponserId):
     # usr=User.objects.get(obj.sponserId)
     #     print usr.username
     # return render(request, 'home/dashboard.html', {'objs':objs})
+
+=======
+	
+	# print sponserId
+
+	objs=UserRelation.objects.filter(parentId=sponserId)
+	# print type(objs)
+	# usr=User.objects.get(objs[0].sponserId)
+	# print usr.username
+	return objs
+	# for obj in objs:
+	# 	sid=obj.sponserId
+	# 	print sid
+		# usr=User.objects.get(obj.sponserId)
+	#     print usr.username
+	# return render(request, 'home/dashboard.html', {'objs':objs})
+>>>>>>> Stashed changes
 
 def isLoggedIn(request):
     user_id = ""

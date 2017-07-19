@@ -29,6 +29,7 @@ def make_pw_hash(name, pw, salt=None):
     h = hashlib.sha256(name + pw + salt).hexdigest()
     return "%s,%s" % (h, salt)
 
+
 def hash_str(s):
     return hmac.new(str(SECRET), str(s)).hexdigest()
 
@@ -43,6 +44,7 @@ def check_secure_val(h):
     if hash_str(check_value[0]) == check_value[1]:
         return check_value[0]
     return None
+
 
 def valid_pw(name, pw, h):
     salt = h.split(',')[1]
@@ -65,7 +67,9 @@ def calculate(rootSponserId, sponserId):
 
 # tree generation
 
+
 def treeGenerate(sponserId):
+
     # print sponserId
 
     objs = UserRelation.objects.filter(parentId=sponserId)
@@ -79,6 +83,7 @@ def treeGenerate(sponserId):
     # usr=User.objects.get(obj.sponserId)
     #     print usr.username
     # return render(request, 'home/dashboard.html', {'objs':objs})
+
 
 def isLoggedIn(request):
     user_id = ""
